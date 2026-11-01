@@ -19,7 +19,7 @@
 },
 "embedding": {
   "api": "ollama",
-  "model": "embeddinggemma",
   "url": "https://127.0.0.1:11434",
+  "model": "embeddinggemma"
 },
 "speak_model": "openai/tts-1/echo"
