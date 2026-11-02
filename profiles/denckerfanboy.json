@@ -2,7 +2,7 @@
   "name": "DenckerFanBoy",
   "model": {
     "api": "ollama",
-    "model": "sweaterdog/andy-4:q5_k_m",
+    "model": "sweaterdog/andy-4:q4_k_m",
     "url": "https://mc-bot.heyklever.app",
     "params": {
       "max_tokens": 1000,
@@ -11,12 +11,12 @@
   },
   "code_model": {
     "api": "ollama",
-    "model": "sweaterdog/andy-4:q5_k_m",
+    "model": "sweaterdog/andy-4:q4_k_m",
     "url": "https://mc-bot.heyklever.app"
   },
   "vision_model": {
     "api": "ollama",
-    "model": "sweaterdog/andy-4:q5_k_m",
+    "model": "sweaterdog/andy-4:q4_k_m",
     "url": "https://mc-bot.heyklever.app"
   },
   "embedding": {
