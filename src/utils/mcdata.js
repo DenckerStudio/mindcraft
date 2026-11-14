@@ -8,9 +8,15 @@ import { plugin as collectblock } from 'mineflayer-collectblock';
 import { plugin as autoEat } from 'mineflayer-auto-eat';
 import plugin from 'mineflayer-armor-manager';
 const armorManager = plugin;
-let mc_version = settings.minecraft_version;
+let mc_version = null;
 let mcdata = null;
 let Item = null;
+
+function initMcDataForVersion(version) {
+    mc_version = version;
+    mcdata = minecraftData(version);
+    Item = prismarine_items(version);
+}
 
 /**
  * @typedef {string} ItemName
@@ -53,6 +59,13 @@ export const WOOL_COLORS = [
 
 
 export function initBot(username) {
+    const configuredVersion = settings.minecraft_version;
+    if (configuredVersion && configuredVersion !== 'auto') {
+        initMcDataForVersion(configuredVersion);
+    } else {
+        mc_version = configuredVersion;
+    }
+
     const options = {
         username: username,
         host: settings.host,
@@ -124,9 +137,7 @@ export function initBot(username) {
     });
 
     bot.once('login', () => {
-        mc_version = bot.version;
-        mcdata = minecraftData(mc_version);
-        Item = prismarine_items(mc_version);
+        initMcDataForVersion(bot.version);
     });
 
     return bot;
