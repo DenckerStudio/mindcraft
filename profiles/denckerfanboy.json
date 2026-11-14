@@ -3,7 +3,7 @@
   "model": {
     "api": "ollama",
     "model": "sweaterdog/andy-4:q5_k_m",
-    "url": "https://mc-bot.heyklever.app",
+    "url": "https://mc-bot.heyklever.app/api/v1",
     "params": {
       "max_tokens": 1000,
       "temperature": 1
@@ -12,16 +12,16 @@
   "code_model": {
     "api": "ollama",
     "model": "sweaterdog/andy-4:q5_k_m",
-    "url": "https://mc-bot.heyklever.app"
+    "url": "https://mc-bot.heyklever.app/api/v1"
   },
   "vision_model": {
     "api": "ollama",
     "model": "sweaterdog/andy-4:q5_k_m",
-    "url": "https://mc-bot.heyklever.app"
+    "url": "https://mc-bot.heyklever.app/api/v1"
   },
   "embedding": {
     "api": "ollama",
-    "url": "https://mc-bot.heyklever.app",
+    "url": "https://mc-bot.heyklever.app/api/v1",
     "model": "embeddinggemma"
   }
 }
